@@ -489,7 +489,7 @@ public class State implements Comparable<State>
 							(z == 2 && tiles[i][j][z] != "Y") || 
 							(z == 3 && tiles[i][j][z] != "O") || 
 							(z == 4 && tiles[i][j][z] != "G") || 
-							(z == 4 && tiles[i][j][z] != "B"))
+							(z == 5 && tiles[i][j][z] != "B"))
 					{
 						this.score++;
 					}
@@ -624,7 +624,7 @@ public class State implements Comparable<State>
 								(z == 2 && tiles[i][j][z] != "Y") || 
 								(z == 3 && tiles[i][j][z] != "O") || 
 								(z == 4 && tiles[i][j][z] != "G") || 
-								(z == 4 && tiles[i][j][z] != "B"))
+								(z == 5 && tiles[i][j][z] != "B"))
 						{
 							correctTiles = false;
 						}

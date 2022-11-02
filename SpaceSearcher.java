@@ -15,7 +15,10 @@ public class SpaceSearcher
 
 	State AStarClosedSet(State initialState, int heuristic)
 	{
-		if(initialState.isFinal()) return initialState;
+		if(initialState.isFinal()) 
+		{
+			return initialState;
+		}
 		// step 1: put initial state in the frontier.
 		this.frontier.add(initialState);
 		// step 2: check for empty frontier.
