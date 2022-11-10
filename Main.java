@@ -13,7 +13,7 @@ public class Main
 		in.close();
 		
 		//Initializations
-		State initialState = new State (k);
+		State initialState = new State (k, false);
 		initialState.print();
 		SpaceSearcher searcher = new SpaceSearcher();
 		
@@ -43,6 +43,7 @@ public class Main
 			{
 				item.print();
 			}
+			System.out.println("COMLETED"); //+++++++++++++++++++++++++REMOVE++++++++++++++++
 		}
 	}
 }
