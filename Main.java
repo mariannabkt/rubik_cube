@@ -13,12 +13,11 @@ public class Main
 		in.close();
 		
 		//Initializations
-		State initialState = new State (k, false);
-		initialState.print();
-		SpaceSearcher searcher = new SpaceSearcher();
-		
-		// Use the Manhattan distance. ++++++++++++++++++++++++FIX+++++++++++++++++++++++
-		State terminalState = searcher.AStarClosedSet(initialState, 2);
+		State initialState = new State (k, true);
+		//initialState.print();
+		CubeSolver solver = new CubeSolver();
+
+		State terminalState = solver.AStarClosedSet(initialState);
 		
 		if(terminalState == null) 
 		{
@@ -30,7 +29,7 @@ public class Main
 			State temp = terminalState;
 			ArrayList<State> path = new ArrayList<>();
 			path.add(terminalState);
-			
+			// if father is null, then we are at the root.
 			while(temp.getFather() != null)
 			{
 				path.add(temp.getFather());
@@ -43,7 +42,6 @@ public class Main
 			{
 				item.print();
 			}
-			System.out.println("COMLETED"); //+++++++++++++++++++++++++REMOVE++++++++++++++++
 		}
 	}
 }
